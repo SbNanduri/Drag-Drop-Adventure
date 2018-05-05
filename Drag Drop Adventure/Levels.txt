@@ -1,0 +1,221 @@
+Everything is multiplied by tile_width which is 50
+x and y are the screen_shift values
+The first values on the line after the 'A# L#' are the x and y values of the screen shift respectively
+The rest of the values are the values of the rectangles being made in order of left, top, width and height
+The values are multiplied to the tile width and then supplied to create the rectangle
+
+w - wall. You can only stand on walls to activate the goal
+m - allows regular movement but no dragging
+d - allows dragging through but no regular movement
+
+s - sign
+
+g - goal
+    s - stationary goal  (gs)
+    p - portable goal   (gp)
+    f - final goal (one true bagel)
+
+e - enemy and the letters after that is which enemy it is. Unless otherwise stated, they can move, fall or be dragged.
+    s - spikes: They cannot move or fall or be dragged
+    b - boulder: They cannot move
+    g - guard: They patrol an area
+
+b - barrier stuff
+    b - barrier block: The actual barrier
+    s - sensor: If something is in front of the sensor, the door will unlock
+
+red outline - explodes, blue outline - can be dragged, purple outline - explodes and can be dragged
+
+
+https://www.youtube.com/watch?v=2Tw39kZIbhs  PICKLING
+
+A1 L1
+7 -17
+sMove with the a and d keys and jump with spacebar. Press w when on the ground in front of the goal to beat the level\9,23
+w-12,2,14,22
+w-12,24,56,6
+w2,20,4,1
+w14,20,6,1
+w7,16,6,1
+w28,20,4,1
+w21,16,6,1
+w13,12,8,1
+w32,2,12,22
+w-12,-4,56,6
+gs16.5,11
+
+A1 L2
+7 -17
+sClick on your character and drag yourself to your destination.                                                                                            The further you drag the character before letting go, the longer it takes for you to be able to drag again as indicated by the cooldown bar at the bottom of the screen\9,23
+w-12,2,14,22
+w-12,24,56,6
+w2,20,4,1
+w14,20,6,1
+w28,20,4,1
+w13,12,8,1
+w32,2,12,22
+w-12,-4,56,6
+gs16.5,11
+
+A1 L3
+7 -17
+sPurple blocks allow you to move through them but they block dragging\9,23
+sThe velocity you had before you started dragging is maintained until after you stop dragging\11,23
+w-12,2,14,22
+w-12,24,56,6
+w2,20,4,1
+w14,20,6,1
+m2,14,30,1
+w28,20,4,1
+w13,12,8,1
+w32,2,12,22
+w-12,-4,56,6
+gs16.5,11
+w12,13,10,1
+
+A1 L4
+7 -17
+sBlue blocks allow you to drag through them but they block movement\9,23
+w-12,2,14,22
+w-12,24,56,6
+w2,20,4,1
+w14,20,6,1
+w7,16,6,1
+w28,20,4,1
+w21,16,6,1
+w13,12,8,1
+w32,2,12,22
+w-12,-4,56,6
+gs16.5,11
+d15.5,11,1,1
+d17.5,11,1,1
+d15.5,10,3,1
+
+A1 L5
+7 -17
+sYou cannot complete levels when standing on blue blocks\9,23
+sYou can drag entities with a blue outline. Remember there is a cooldown associated with dragging\11,23
+w-12,2,14,22
+w-12,24,56,6
+w2,20,4,1
+w14,20,6,1
+w7,16,6,1
+w28,20,4,1
+w21,16,6,1
+w13,12,8,1
+w32,2,12,22
+w-12,-4,56,6
+gp16.5,10
+d15.5,10,1,1
+d17.5,10,1,1
+d15.5,9,3,1
+d15.5,11,3,1
+
+A1 L6
+7 -17
+sThe entity in the middle is a boulder and will kill anything if it is moving, otherwise it is harmless.\14,19
+sThe bagoal is behind some deadly spikes...\13,11
+sYou cannot enter a bagoal if it is covered by something\20,11
+w-12,2,14,22
+w-12,24,56,6
+w2,20,4,1
+w15,21,4,1
+w14,20,2,1
+w18,20,2,1
+w7,16,6,1
+w28,20,4,1
+w21,16,6,1
+w13,12,8,1
+w32,2,12,22
+w-12,-4,56,6
+gs16.5,11
+eb16.5,18,1,1
+es16.5,11,1,1
+
+A1 L7
+7 -17
+sThese guards patrol around and kill you if they touch you.\9,23
+w-12,2,14,22
+w-12,24,56,6
+w2,20,4,1
+w15,21,4,1
+w14,20,2,1
+w18,20,2,1
+w7,16,6,1
+w28,20,4,1
+w21,16,6,1
+w13,12,8,1
+w32,2,12,22
+w-12,-4,56,6
+gs16.5,11
+eg10,23,1,1
+eg28,19,1,1
+eg2,19,1,1
+eg21,15,1,1
+eg7,15,1,1
+
+A1 L8
+7 -17
+sYou cannot pass through the grey blocks at the top of the level...\7,15
+s...not unless something is in front of this yellow sensor\9,15
+w-12,2,14,22
+w-12,24,56,6
+w2,20,4,1
+w15,21,4,1
+w14,20,2,1
+w18,20,2,1
+w7,16,6,1
+w28,20,4,1
+w21,16,6,1
+w13,12,8,1
+w32,2,12,22
+w-12,-4,56,6
+gs16.5,11
+bs10,15
+bb14.5,10,1,2
+bb18.5,10,1,2
+bb14.5,9,5,1
+
+A1 L9
+7 -17
+w-12,2,14,22
+w-12,24,56,6
+w2,20,4,1
+w15,21,4,1
+w14,20,2,1
+w18,20,2,1
+w7,16,6,1
+w28,20,4,1
+w21,16,6,1
+w13,11,1.5,1
+w16.5,11,1,1
+w19.5,11,1.5,1
+w32,2,12,22
+w-12,-4,56,6
+gs16.5,10
+eb16.5,18,1,1
+es16.5,10,1,1
+bb14.5,9,1,2
+bb18.5,9,1,2
+bb14.5,8,5,1
+bb14.5,11,2,1
+bb17.5,11,2,1
+bs16.5,23
+
+A2 L1
+7 -17
+w-12,2,14,22
+w-12,24,56,6
+w32,2,12,22
+w-12,4,56,6
+w5,12,5,1
+bb10,12,2,1
+w12,10,1,13
+w5,15,4,1
+w8,16,4,1
+eg9,15,1,1
+gf16.5,23
+bb12,23,1,1
+bs11,12
+bs11,11
+bs11,13
